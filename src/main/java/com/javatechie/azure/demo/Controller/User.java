@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.RestController;
 public class User {
     @GetMapping("/select")
     public  Users getNewUser(){
-        Users add =  new Users("khoa", "khoa");
+        Users add =  new Users("khoa", "21");
         return add;
     }
     public static void main(String[] args) {
