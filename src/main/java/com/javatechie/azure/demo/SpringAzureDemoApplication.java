@@ -18,6 +18,11 @@ public class SpringAzureDemoApplication {
 		Users users = new Users("aaasdf","dfads");
 		return users;
 	}
+	@GetMapping("/select")
+	public Users getNewUser(){
+		Users add =  new Users("khoa", "khoa");
+		return add;
+	}
 	@GetMapping("/")
 	public String mess(){
 		return "Congrats ! your application deployed successfully in Azure Platform. !";
