@@ -1,19 +1,18 @@
 package com.javatechie.azure.demo.Controller;
 
-import com.javatechie.azure.demo.SpringAzureDemoApplication;
-import com.javatechie.azure.demo.Users;
-import org.springframework.boot.SpringApplication;
+import com.javatechie.azure.demo.DTO.AccountDTO;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
+@SpringBootApplication
 public class User {
     @GetMapping("/select")
-    public  Users getNewUser(){
-        Users add =  new Users("khoa", "21");
+    public AccountDTO getNewUser(){
+        AccountDTO add =  new AccountDTO("khoa", "21","dfsf","sadfd", true);
         return add;
     }
-    public static void main(String[] args) {
-        SpringApplication.run(SpringAzureDemoApplication.class, args);
-    }
+
+
 }
